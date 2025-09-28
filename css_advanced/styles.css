@@ -1,1 +1,210 @@
 
+
+/* ========== Header ========== */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  background: url("images/hero-bg.jpg") no-repeat center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  margin: 0 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.hero button {
+  background-color: #c271ff;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* ========== Meet the Pros ========== */
+.pros {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.pros h2 {
+  margin-bottom: 40px;
+}
+
+.pros .cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.pros .card img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.pros .card h3 {
+  margin-top: 15px;
+}
+
+/* ========== Testimonial ========== */
+.testimonial {
+  background-color: #c271ff;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ========== Tutorials ========== */
+.tutorials {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.tutorials h2 {
+  margin-bottom: 40px;
+}
+
+.tutorials .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tutorials .card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tutorials .card img {
+  width: 100%;
+}
+
+.tutorials .card h3 {
+  margin: 15px 0;
+}
+
+/* ========== Free Membership ========== */
+.membership {
+  background-color: #071629;
+  color: white;
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.membership h2 {
+  margin-bottom: 40px;
+}
+
+.membership .features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.membership .features div {
+  max-width: 250px;
+}
+
+.membership button {
+  background-color: #c271ff;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ========== FAQ ========== */
+.faq {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.faq h2 {
+  margin-bottom: 40px;
+}
+
+.faq .questions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  text-align: left;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #071629;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer .social a {
+  color: white;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
