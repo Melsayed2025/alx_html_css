@@ -1,89 +1,118 @@
 * {
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-
-    font-family: 'Source Sans Pro', sans-serif;
-    color: white;
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
 }
-header.header{
-background-image: url("header/headphones_hero_1.jpg");
-background-size: cover;
-background-position: center;
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-text-align: center;
-position: relative;
+
+header.header {
+  background-image: url("header/headphones_hero_1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    position: relative;
-    flex-wrap: wrap;
-    gap: 20px;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.logo {
-  height: 0px;
+
+.logo img {
+  height: 40px;
 }
 
 .nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
-.nav ul a{
+
+.nav ul a {
   text-decoration: none;
   color: white;
   transition: color 0.3s;
 }
-.nav a:hover{
+
+.nav a:hover {
   color: red;
 }
 
-.text button{
-
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    margin: 30px;
+.text button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 30px;
 }
+
 .text p,
 .text h1 {
-    margin: 20px;
-    padding-bottom: 20px;
-    max-width: 480px; 
-    margin: auto;
-    line-height: 1.6;
-
+  margin: 20px;
+  padding-bottom: 20px;
+  max-width: 480px;
+  margin: auto;
+  line-height: 1.6;
 }
 
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
 
-@media (max-width: 480px){
-    .nav {
-        flex-direction: column;
-       
-        
+.menu1 {
+  display: none;
+}
+
+/* 📱 للموبايل */
+@media (max-width: 480px) {
+  .menu-icon {
+    display: block;
+    color: white;
+    padding: 20px;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    padding: 20px 0;
+  }
+
+  
+  .menu1:checked + .menu-icon + .nav ul {
+    display: flex;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
     }
-    
-    .nav ul{
-        flex-direction: column;
-        gap :10px;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-    .text hi,p {
-        padding: 20px;;
-    }
+  }
 }
