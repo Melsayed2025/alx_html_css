@@ -1,0 +1,56 @@
+.container > div {
+  background: white;
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 220px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  
+  
+}
+
+
+.container i {
+  font-size: 40px;
+  color: #ff3c00;
+  margin-bottom: 15px;
+  
+}
+
+
+@keyframes floaty {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.container > div:nth-child(odd) {
+  animation: floaty 4s ease-in-out infinite;
+}
+.container > div:nth-child(even) {
+  animation: floaty 5s ease-in-out infinite reverse;
+}
+
+
+
+.container > div:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  opacity: 1;
+}
+
+
+.container > div:active {
+  transform: scale(0.97);
+}
+
+
+.container h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.container p {
+  font-size: 14px;
+  color: #555;
+}
