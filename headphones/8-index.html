@@ -1,427 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headphones Landing Page</title>
+  <link rel="stylesheet" href="0-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-}
-
-header.header {
-  background-image: url("header/headphones_hero_1.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  position: relative;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  position: relative;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.logo img {
-  height: 40px;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav ul a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s;
-}
-
-.nav a:hover {
-  color: red;
-}
-
-.text button {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 20px;
-  margin: 30px;
-}
-
-.text p,
-.text h1 {
-  margin: 20px;
-  padding-bottom: 20px;
-  max-width: 480px;
-  margin: auto;
-  line-height: 1.6;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.menu1 {
-  display: none;
-}
-
-
-@media (max-width: 480px) {
-  .menu-icon {
-    display: block;
-    color: white;
-    padding: 20px;
-  }
-
-  .nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: rgba(0,0,0,0.7);
-    padding: 20px 0;
-  }
-
-  
-  .menu1:checked + .menu-icon + .nav ul {
-    display: flex;
-    animation: slideDown 0.3s ease;
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-/* ---------------- What we do animation ---------------- */
-.section1 {
-  padding: 30px 60px;
-  text-align: center;
-  color: black;
-  line-height: 1.6;
-}
-
-.first h1 {
-  margin-bottom: 20px;
-}
-
-.container {
-  margin-top: 70px;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-@media screen and (max-width: 480px) {
-  .container {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-/* ====== شكل الصناديق ====== */
-.container > div {
-  background: white;
-  border-radius: 20px;
-  padding: 25px 20px;
-  width: 220px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  
-  
-}
-
-/* أيقونات */
-.container i {
-  font-size: 40px;
-  color: #ff3c00;
-  margin-bottom: 15px;
-  
-}
-
-/* ====== أنيميشن مستمرة خفيفة ====== */
-@keyframes floaty {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.container > div:nth-child(odd) {
-  animation: floaty 4s ease-in-out infinite;
-}
-.container > div:nth-child(even) {
-  animation: floaty 5s ease-in-out infinite reverse;
-}
-
-
-/* ====== تأثير عند المرور بالماوس ====== */
-.container > div:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-  opacity: 1;
-}
-
-/* تأثير عند الضغط (click) */
-.container > div:active {
-  transform: scale(0.97);
-}
-
-/* ====== نصوص الصناديق ====== */
-.container h3 {
-  margin: 10px 0;
-  font-size: 20px;
-  color: #333;
-}
-
-.container p {
-  font-size: 14px;
-  color: #555;
-}
-
-/*------------------*/
-
-
-.section2 {
-
-    background: url('header/background-dark-image.jpg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    padding: 100px 20px;
-    text-align: center;
-    color: #ffffff;
-    overflow: hidden; 
-}
-
-
-.section2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); 
-    z-index: 1;
-}
-
-.section2 > * {
-    position: relative;
-    z-index: 2; 
-}
-
-
-.our-result {
-    max-width: 800px;
-    margin: 0 auto 60px;
-}
-
-.our-result .title {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.our-result p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #c0c0c0;
-}
-
-
-.shaps {
-    display: flex;
-    justify-content: center;
-    gap: 30px; 
-    flex-wrap: wrap;
-    
-    align-items: flex-end; 
-}
-
-
-.pentagon-container {
-    
-    flex-basis: 170px; 
-    height: 190px; 
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-}
-
-.pentagon {
-    position: relative;
-  
-    width: 150px; 
-    height: 120px; 
-    background-color: #ff574d; 
-    margin-top: 50px; 
-    box-sizing: border-box; 
+</head>
+<body>
+  <header class="header">
 
     
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff; 
-    padding-top: 5px; 
-}
+    <input type="checkbox" id="menu" class="menu1">
+    <label for="menu" class="menu-icon">☰</label>
 
-
-.pentagon::before {
-    content: "";
-    position: absolute;
-    top: -50px; 
-    left: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 50px solid #ff574d; 
-    border-left: 75px solid transparent;
-    border-right: 75px solid transparent; 
-}
-
-
-.pentagon .percentage {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0;
-    line-height: 1; 
-}
-
-.pentagon .label {
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-
-@media (max-width: 576px) {
-    .section2 {
-        padding: 60px 10px;
-    }
-    .our-result .title {
-        font-size: 28px;
-    }
-    .our-result p {
-        font-size: 14px;
-    }
-    .shaps {
-        gap: 15px;
-    }
-    .pentagon-container {
-        flex-basis: 45%; 
-        height: 180px;
-    }
-    .pentagon {
-        width: 120px;
-        height: 100px;
-        margin-top: 40px;
-    }
-    .pentagon::before {
-        top: -40px;
-        border-bottom-width: 40px;
-        border-left-width: 60px;
-        border-right-width: 60px;
-    }
-    .pentagon .percentage {
-        font-size: 30px;
-    }
-    .pentagon .label {
-        font-size: 12px;
-    }
-}
-
-
-@media (min-width: 577px) and (max-width: 992px) {
-    .shaps {
-        gap: 20px;
-    }
-    .pentagon-container {
-        flex-basis: 180px; 
-    }
-}
-
-/*------------*/
-.form {
-margin: 80px;
-
-background-color: white;
-
-display: flex;
-
-align-items: center;
-flex-direction: column;
-
-}
-.form1{
-display: flex;
-flex-direction: column;
-gap: 10px;
-font-size: 20px;
-color: black;
-
-}
-.form1 input,textarea{
-  font-size: 18px;
-  border: none;
-  border-bottom: 1px solid #c0c0c0
   
-}
+    <nav class="nav">
+      <div class="logo">
+        <img src="header/logo_headphones.png" alt="logo">
+      </div>
 
-.form1 button {
-   background-color: #FF6565; 
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-  
-    display: block; 
-    width: auto; 
-    margin: 40px auto 0; 
-}
-.footer{
-background-color: black;
-color: white;
-height: 150px;
-width: 100%;
+      <ul>
+        <li><a href="#">What we do</a></li>
+        <li><a href="#">Our result</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </nav>
+
+    
+    <div class="text">
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quo!</p>
+      <button class="button">Call to Action</button>
+      <p class="under-lorem">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem natus voluptatibus minus adipisci amet expedita iure ut quaerat temporibus tenetur!
+      </p>
+    </div>
+
+  </header>
+
+  <section class="section1"> 
+  <div class="first">
+    <h1>what we do ...</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam corporis repudiandae rem itaque voluptas...</p>
+  </div>
+
+  <div class="container">
+    <div class="box1">
+      <i class="fa-solid fa-volume-high"></i>
+      <h3>Lorem ipsum</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="box2">
+      <i class="fa-solid fa-clapperboard"></i>
+      <h3>Lorem ipsum</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="icon-box3">
+      <i class="fa-solid fa-music"></i>
+      <h3>Lorem ipsum</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="icon-box4">
+      <i class="fa-solid fa-ear-listen"></i>
+      <h3>Lorem ipsum</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</section>
 
 
-}
-.footer .social-links {
-display: flex;
-flex-direction: row;
-justify-content: right;
-gap: 10px;
-margin-top: -50px;
-}
-.footer p{
-  display:flex ;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 90px;
-}
+ <section class="section2">
+    <div class="our-result">
+        <h1 class="title">our results speak for themselves</h1>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quae magni delectus voluptate non omnis tenetur ducimus velit veniam natus.</p>
+    </div>
+
+    <div class="shaps">
+        <div class="pentagon-container">
+            <div class="pentagon">
+                <h2 class="percentage">+2%</h2>
+                <p class="label">Lorem ipsum dolor</p>
+            </div>
+        </div>
+
+        <div class="pentagon-container">
+            <div class="pentagon">
+                <h2 class="percentage">+2%</h2>
+                <p class="label">Lorem ipsum dolor</p>
+            </div>
+        </div>
+
+        <div class="pentagon-container">
+            <div class="pentagon">
+                <h2 class="percentage">+2%</h2>
+                <p class="label">Lorem ipsum dolor</p>
+            </div>
+        </div>
+
+        <div class="pentagon-container">
+            <div class="pentagon">
+                <h2 class="percentage">+2%</h2>
+                <p class="label">Lorem ipsum dolor</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="form">
+<form action="" class="form1">
+<h1>contact us</h1>
+<label for="name">name</label>
+<input type="text" id="name" >
+<label for="email">Email</label>
+<input type="email" id="email">
+<label for="message">your message</label>
+<textarea id="message" rows="5"></textarea>
+<button type="submit" >call to action </button>
+
+</form>
+
+
+  </section>
+
+  <footer class="footer">
+<img src="header/logo_headphones.png" class="logo2">
+
+
+<div class="social-links">
+  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+
+  <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-twitter"></i>
+  </a>
+
+  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+<p>&copy;  All rights reserved 2025</p>
+
+
+  </footer>
+</body>
+</html>
